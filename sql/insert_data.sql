@@ -2,9 +2,9 @@
 -- Inserts sample users and calculation rows as specified in the assignment.
 
 -- Insert users
-INSERT INTO users (username, email) 
-VALUES 
-('alice', 'alice@example.com'), 
+INSERT INTO users (username, email)
+VALUES
+('alice', 'alice@example.com'),
 ('bob', 'bob@example.com');
 
 -- Insert calculations

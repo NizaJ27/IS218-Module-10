@@ -158,25 +158,25 @@ services:
   web:
     # Build Configuration
     build: .  # Instructs Docker Compose to build the Docker image using the Dockerfile located in the current directory (denoted by '.').
-    
+
     # Container Naming
     container_name: fastapi_calculator  # Assigns a custom name "fastapi_calculator" to the container. This makes it easier to reference the container in Docker commands.
-    
+
     # Port Mapping
     ports:
       - "8000:8000"  # Maps port 8000 on the host machine to port 8000 in the Docker container. This allows access to the FastAPI application via localhost:8000 on the host.
-    
+
     # Volume Mounting
     volumes:
       - .:/app  # Mounts the current directory (host) to the `/app` directory inside the container. This facilitates live updates by reflecting changes made in the host directory within the container without rebuilding the image.
-    
+
     # Environment Variables
     environment:
       - PYTHONDONTWRITEBYTECODE=1  # Prevents Python from writing `.pyc` files to disk. This ensures that only source code is maintained, keeping the container clean.
       - PYTHONUNBUFFERED=1  # Forces Python to flush the output buffer immediately. This is useful for real-time logging, ensuring that logs are visible as they are generated.
-    
+
     # Command Execution
-    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload  
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
       # Specifies the command to run when the container starts.
       # - `uvicorn`: An ASGI server for running FastAPI applications.
       # - `main:app`: Points to the `app` instance in the `main.py` file, which is the FastAPI application.
@@ -322,14 +322,14 @@ services:
 #      docker --version
 #      docker-compose --version
 #      ```
-    
+
 # 2. **Navigate to the Project Directory**:
 #    - Open your terminal or command prompt.
 #    - Change the current directory to the one containing the `docker-compose.yml` file:
 #      ```bash
 #      cd /path/to/your/project
 #      ```
-    
+
 # 3. **Build and Start the Containers**:
 #    - Execute the following command to build the Docker images and start the containers as defined in the Compose file:
 #      ```bash
@@ -337,14 +337,14 @@ services:
 #      ```
 #    - **Flags**:
 #      - `--build`: Forces a rebuild of the Docker images, ensuring that the latest code and dependencies are included.
-    
+
 # 4. **Access the Application**:
 #    - Once the containers are up and running, open your web browser and navigate to:
 #      ```
 #      http://localhost:8000
 #      ```
 #    - This will display your FastAPI Calculator application, accessible via the mapped host port 8000.
-    
+
 # 5. **Stopping the Containers**:
 #    - To stop the running containers, press `Ctrl+C` in the terminal where Docker Compose is running.
 #    - Alternatively, run:

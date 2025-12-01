@@ -6,7 +6,7 @@
 
 > Skip this step if you're on Windows.
 
-Homebrew is a package manager for macOS.  
+Homebrew is a package manager for macOS.
 You’ll use it to easily install Git, Python, Docker, etc.
 
 **Install Homebrew:**
@@ -37,7 +37,7 @@ brew install git
 
 - **Windows**
 
-Download and install [Git for Windows](https://git-scm.com/download/win).  
+Download and install [Git for Windows](https://git-scm.com/download/win).
 Accept the default options during installation.
 
 **Verify Git:**
@@ -140,7 +140,7 @@ brew install python
 
 - **Windows**
 
-Download and install [Python for Windows](https://www.python.org/downloads/).  
+Download and install [Python for Windows](https://www.python.org/downloads/).
 ✅ Make sure you **check the box** `Add Python to PATH` during setup.
 
 **Verify Python:**
@@ -300,4 +300,3 @@ docker exec -i $(docker ps -qf "name=db") psql -U postgres -d postgres < sql/cre
 ```
 
 Replace `postgres` with the target database name if different.
-
